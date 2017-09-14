@@ -1,3 +1,7 @@
+### log ###
+*.log
+logs/
+
 ### STS ###
 .apt_generated
 .classpath

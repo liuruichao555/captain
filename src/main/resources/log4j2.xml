@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <properties>
+        <property name="LOG_DIR" value="/Users/liuruichao/mygit/captain"/>
+        <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%p] - %l [%thread] %m%n"/>
+    </properties>
+    <appenders>
+        <console name="Console">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </console>
+        <RollingFile name="RollingFile" fileName="${LOG_DIR}/logs/captain.log"
+                     filePattern="${LOG_DIR}/logs/captain-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+            </Policies>
+        </RollingFile>
+    </appenders>
+    <loggers>
+        <logger name="org.springframework" level="INFO"/>
+        <logger name="org.mybatis" level="INFO" />
+        <root level="INFO">
+            <appender-ref ref="Console"/>
+            <!--<appender-ref ref="RollingFile"/>-->
+        </root>
+    </loggers>
+</configuration>
