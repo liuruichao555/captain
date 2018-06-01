@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- master -->
     <properties>
         <property name="LOG_DIR" value="/Users/liuruichao/mygit/captain"/>
         <property name="LOG_PATTERN" value="[%d{yyyy-MM-dd HH:mm:ss}] [%p] - %l [%thread] %m%n"/>
